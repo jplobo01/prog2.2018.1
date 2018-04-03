@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+char sexo;
+float a;
+
+float pesoid(float altura, float peso,char sexo)	
+ {         
+ 	if(sexo=='m')
+    {
+      float masculino=(62.1*altura)-(44.7);	
+	  return masculino;	
+    }
+    if(sexo=='f')
+    {
+       float feminino=(72.2*altura)-(58);
+	   return feminino;		
+    }
+}
+
+int main()
+{
+
+  float altura, pesoideal,peso;
+  char m, f; 
+  
+  	printf("\n Diga se eh M ou F:");
+  	scanf("%c",&sexo);
+  	
+	printf("\n Entre com seu altura:");
+	scanf("%f",&altura);
+	printf("\n Entre com sua peso:");
+	scanf("%f",&peso);
+	
+	float a = pesoid(altura,peso,sexo);
+	 printf("\n Seu peso ideal eh: %.2f",a);
+	
+return 0;
+}
