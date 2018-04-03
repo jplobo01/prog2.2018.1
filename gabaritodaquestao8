@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int analisarano(int ano)
+{
+	if(ano%4==0)
+	{
+		if(ano%100==0)
+		{
+			return 5;			
+		}
+		else
+		{
+			return 6;
+		}	
+	}
+	else
+	{
+		return 6;
+	}
+
+
+}
+int main()
+{
+	int ano;
+	printf("\n Entre com o ano: ");
+	scanf("%d",&ano);
+	
+	int f = analisarano(ano);
+	
+	if(f==5)
+	{
+		printf("\n Eh bissexto!!!");
+	}
+	else
+	{
+		printf("\n Nao eh bissexto!!!");
+	}
+	
+	return 0;	
+}
